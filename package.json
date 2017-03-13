@@ -1,0 +1,21 @@
+{
+  "name": "grow-node-exercise",
+  "version": "1.0.0",
+  "description": "A little exercise using a Star Wars API [https://swapi.co/](https://swapi.co/)",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "author": "Leandro Zeballos",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^2.1.5",
+    "express": "^4.15.2",
+    "express-hbs": "^1.0.4",
+    "handlebars": "^4.0.6",
+    "hbs": "^4.0.1",
+    "lodash": "^4.17.4",
+    "q": "^1.4.1"
+  }
+}

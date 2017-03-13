@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{title}}</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/twbs/bootstrap/48938155eb24b4ccdde09426066869504c6dab3c/dist/css/bootstrap.min.css">
+
+</head>
+<body>
+<div class="container">
+  <div class="row">
+    <div class="col-md-9">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <div class="row">
+			        <div class="col-md-4 text-center">
+              <img class="img-circle avatar avatar-original" style="-webkit-user-select:none;
+              display:block; margin:auto;" src="http://placehold.it/120x120">
+            </div>
+            <div class="col-md-8">
+              <div class="row">
+                <div class="col-md-12">
+                  <h1 class="only-bottom-margin">{{character.name}}</h1>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-4">
+                  <span class="text-muted">Height:</span>
+                </div>
+                <div class="col-md-4">
+                  {{character.height}}
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-4">
+                  <span class="text-muted">Mass:</span>
+                </div>
+                <div class="col-md-4">
+                  {{character.mass}}
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-4">
+                  <span class="text-muted">Hair Color:</span>
+                </div>
+                <div class="col-md-4">
+                  {{character.hair_color}}
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-4">
+                  <span class="text-muted">Skin Color:</span>
+                </div>
+                <div class="col-md-4">
+                  {{character.skin_color}}
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-4">
+                  <span class="text-muted">Eye Color:</span>
+                </div>
+                <div class="col-md-4">
+                  {{character.eye_color}}
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-4">
+                  <span class="text-muted">Birth Year:</span>
+                </div>
+                <div class="col-md-4">
+                  {{character.birth_year}}
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-4">
+                  <span class="text-muted">Gender:</span>
+                </div>
+                <div class="col-md-4">
+                  {{character.gender}}
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-4">
+                  <span class="text-muted">Home World:</span>
+                </div>
+                <div class="col-md-4">
+                  <a href="{{character.homeworld}}">{{character.homeworld}}</a>
+                </div>
+              </div>
+              <br/>
+              <div class="row">
+                <div class="col-md-4">
+                  <span class="text-muted">Films:</span>
+                </div>
+                {{#if character.films.length}}
+                  <div class="col-md-4">
+                    {{#each character.films}}
+                  {{#if @first}}
+                  <a href="{{this}}">{{this}}</a>
+                  </div>
+                  </div>
+                  {{else}}
+                  <div class="row">
+                    <div class="col-md-4 col-md-offset-4">
+                     <a href="{{this}}">{{this}}</a>
+                    </div>
+                   </div>
+                  {{/if}}
+                {{/each}}
+                {{else}}
+                  <div class="col-md-4"> - </div>
+                  </div>
+                {{/if}}
+             <br/>
+              <div class="row">
+                   <div class="col-md-4">
+                     <span class="text-muted">Species:</span>
+                   </div>
+                   {{#if character.species.length}}
+                   <div class="col-md-4">
+                     {{#each character.species}}
+                   {{#if @first}}
+                    <a href="{{this}}">{{this}}</a>
+                   </div>
+                 </div>
+                 {{else}}
+                 <div class="row">
+                   <div class="col-md-4 col-md-offset-4">
+                    <a href="{{this}}"> {{this}}</a>
+                   </div>
+                  </div>
+                 {{/if}}
+                 {{/each}}
+                 {{else}}
+                   <div class="col-md-4"> - </div>
+                   </div>
+                 {{/if}}
+              <br/>
+              <div class="row">
+                <div class="col-md-4">
+                  <span class="text-muted">Vehicles:</span>
+                </div>
+                {{#if character.vehicles.length}}
+                   <div class="col-md-4">
+                     {{#each character.vehicles}}
+                   {{#if @first}}
+                   <a href="{{this}}">{{this}}</a>
+                   </div>
+                 </div>
+                 {{else}}
+                 <div class="row">
+                   <div class="col-md-4 col-md-offset-4">
+                    <a href="{{this}}">{{this}} </a>
+                   </div>
+                  </div>
+                 {{/if}}
+                 {{/each}}
+                {{else}}
+                 <div class="col-md-4"> - </div>
+                 </div>
+                {{/if}}
+              <br/>
+              <div class="row">
+                  <div class="col-md-4">
+                    <span class="text-muted">Starships:</span>
+                  </div>
+                  {{#if character.starships.length}}
+                  <div class="col-md-4">
+                    {{#each character.starships}}
+                  {{#if @first}}
+                  <a href="{{this}}">{{this}}</a>
+                  </div>
+                </div>
+                {{else}}
+                <div class="row">
+                  <div class="col-md-4 col-md-offset-4">
+                   <a href="{{this}}"> {{this}} </a>
+                  </div>
+                 </div>
+                {{/if}}
+                {{/each}}
+                {{else}}
+                 <div class="col-md-4"> - </div>
+                </div>
+                {{/if}}
+              <br/>
+              <div class="row">
+                <div class="col-md-4">
+                  <span class="text-muted">Created:</span>
+                </div>
+                <div class="col-md-4">
+                  {{character.created}}
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-4">
+                  <span class="text-muted">Edited:</span>
+                </div>
+                <div class="col-md-4">
+                  {{character.edited}}
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-4">
+                  <span class="text-muted">Url:</span>
+                </div>
+                <div class="col-md-4">
+                  <a href="{{character.url}}">{{character.url}}</a>
+                </div>
+              </div>
+
+
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
