@@ -1,4 +1,4 @@
-- A little example that returns data from Star Wars API [https://swapi.co/]
+# A little example that returns data from Star Wars API [https://swapi.co/]
 ## Run:
 - npm install
 - npm start
